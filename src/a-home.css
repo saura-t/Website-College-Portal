@@ -1,0 +1,86 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: cornsilk;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 5px;
+    max-height: 15vh;
+}
+#logo {
+    padding: 20px;
+    max-width: 8%;
+    max-height: 2%;
+
+}
+ul{
+    display: flex;
+}
+#navbar {
+    list-style: none;
+    padding: 15px;
+    font-family: 'Slabo 27px', serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-right: 50px;
+}
+a {
+    text-decoration: none;
+    color: black
+}
+.dashboard {
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: initial;
+    margin-top: 0px;
+    width: 150px;
+}
+.leftbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#left-box {
+    list-style: none;
+    padding: 5px;
+    font-family: 'Slabo 27px', serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#profile {
+    width: 100px;
+    height: 100px;
+}
+hr {
+    height: 1px;
+    width: 10px;
+    border: none;
+    background: white;
+    margin-left: -40px;
+    width: 150%;
+    margin-top: 5px;
+}
+ul li:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: 0px;
+    background: #f00;
+}
