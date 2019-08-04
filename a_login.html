@@ -6,19 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./src/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:600&display=swap" rel="stylesheet">
 </head>
 <body class="header">
-    <div class="container">
-        <div style="display: flex; flex-direction:column">
+    <div class="welcome">
+        Welcome
+    </div>
+    <form action="login.php" class="container" method="post">
+        <p style="font-family: 'Rajdhani', sans-serif; font-size: 10mm; margin:0px">ADMIN LOGIN</p>
+        <div style="display: flex; padding: 20px; flex-direction:column">
             <label for="username">Username:</label>
-            <input type="text" class="input">
+            <input type="text" id="a_user" class="input" required>
         </div>
-        <div style="display:flex; padding:20px; flex-direction:column">
+        <div style="display:flex; padding: 20px; padding-top: 0px; flex-direction:column">
             <label for="password">Password:</label>
-            <input type="password" class="input">
+            <input type="password" id="a_pwd" class="input" required>
         </div>
         <input type="button" value="Sign In" class="btn">
-    </div> 
+    </form>
     <!-- <div class="container">
         <div style="display:flex; width: 100%">
             <div style="display: flex; flex-direction:column">
