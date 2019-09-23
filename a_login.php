@@ -48,7 +48,7 @@
                     if($_REQUEST["activity"] == "expired"){
                     ?>
                             <div style="display: flex; padding: 20px; flex-direction:column">
-                                <label style='color:green;'>You session is expired.</label>
+                                <label style='color:green;'>You session is expired. Login again</label>
                             </div>
             
                     <?php           
@@ -67,6 +67,11 @@
             <input type="password" name="a_pwd" class="input" required>
         </div>
         <button class="btn" type="submit">Sign In</button>
+        <a href="index.php">
+        <input type="button" class="btn" value="Cancel">
+        </a>
+        <!-- <a href="index.php">Cancel</a> -->
+        
     </form>
     <!-- <div class="container">
         <div style="display:flex; width: 100%">

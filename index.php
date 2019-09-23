@@ -8,10 +8,6 @@ define('DB_SERVER', "localhost"); // db server
     session_start();
 
     $conn = mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE) or die("unable to connect");
-
-    if ( !isset($_SESSION['id']) ) {
-        header("Location: a_login.php?activity=expired");
-    }
     
     $sql = "SELECT post_id, post_date, post_time, post_title, post_description FROM posts order by post_id desc";
     $result = $conn->query($sql);
@@ -44,11 +40,15 @@ define('DB_SERVER', "localhost"); // db server
                 <a href="#">Home</a>
             </li> -->
             <li id="navbar">
-                <a href="logout.php">Logout</a>
+                <a href="a_login.php">Sign In</a>
             </li>
         </ul>
     </nav>
     <div class="box">
+        <?php
+            if (isset($_SESSION['id'])) {
+        ?>
+
         <ul class="dashboard">
             <div class="profile">
                 <img id="profile" src="src\profile.png" alt="">
@@ -60,6 +60,10 @@ define('DB_SERVER', "localhost"); // db server
                 <li id="left-box"><a href="a_posts.php" >Posts</a></li>
             </div> 
         </ul>
+
+        <?php
+            }
+        ?>
         <div class="box2">
         <?php
             if ($result->num_rows > 0) {

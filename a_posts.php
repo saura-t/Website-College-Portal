@@ -13,7 +13,7 @@ define('DB_SERVER', "localhost"); // db server
         header("Location: a_login.php?activity=expired");
     }
 
-    $sql = "SELECT post_id, post_date, post_time, post_title, post_description FROM posts";
+    $sql = "SELECT post_id, post_date, post_time, post_title, post_description FROM posts order by post_id desc";
     $result = $conn->query($sql);
 
 ?>
@@ -67,7 +67,7 @@ define('DB_SERVER', "localhost"); // db server
                 </label>
                 <br>
                 <label class="post">
-                    <?php echo $row["post_description"]; ?>
+                <p style="white-space:pre-wrap"><?php echo $row["post_description"]; ?></p>
                 </label>
             </div>
         
@@ -90,7 +90,7 @@ define('DB_SERVER', "localhost"); // db server
         <input type="text" placeholder="Enter Post Title" name="title" required>
 
         <label for="description"><b>Description:</b></label>
-        <textarea type="text" placeholder="Enter Post Description" name="description" required></textarea>
+        <textarea type="text" style="white-space: pre-wrap" placeholder="Enter Post Description" name="description" required></textarea>
 
         <button type="submit" class="btn">Post</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
