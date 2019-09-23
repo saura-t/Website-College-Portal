@@ -44,8 +44,9 @@ label{
 }
 .btn{
     width: 150px;
+    cursor: pointer;
     border:1px solid #cccccc;
     border-radius: 15px;
     padding: 10px 5px;
-    margin-top: 15px;   
+    margin-top: 15px;
 }
